@@ -4,6 +4,10 @@ import java.util.Random;
 
 import static org.junit.Assert.*;
 
+/**
+ * 排序测试
+ *  @author sun
+ */
 public class MysortTest {
     /**
      * 生成随机数 数组
@@ -45,7 +49,6 @@ public class MysortTest {
       //  int[] sort = {18, 48, 32, 5, 108};
 
         foeach(sort, "排序前:");
-        //Mysort.quickSort(sort, new Random().nextInt(sort.length - 1), sort.length - 1);
         Mysort.quickSort(sort,0, sort.length - 1);
         foeach(sort, "排序后:");
 
