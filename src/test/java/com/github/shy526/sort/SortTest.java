@@ -8,8 +8,8 @@ import org.junit.runners.JUnit4;
 
 import java.util.Random;
 @RunWith(JUnit4.class)
-public class SortTest extends TestCase{
-    public static int[] testClassArray = null;
+public class SortTest{
+    public int[] testMaxArray = null;
     public int[] testArray = null;
     public Long startTime;
     @Rule
@@ -46,11 +46,12 @@ public class SortTest extends TestCase{
     }
     @BeforeClass
     public static void beforeClass(){
-        testClassArray=randomInt(100000, 0, 100000000);
+
     }
     @Before
     public void before() {
         testArray=randomInt(10, 0, 100000000);
+        testMaxArray=randomInt(100000, 0, 100000000);
         foEach(testArray,"排序前数组:");
         startTime=System.currentTimeMillis();
     }
